@@ -6,8 +6,6 @@
 	--background-color-dark: #0B0C10;
 	--headings-color: #66FCF1;
 	--heading-color-dark: #45A293;
-
-
 }
 
 *{
@@ -16,12 +14,14 @@
 	box-sizing: border-box;
 }
 
+html{
+	scroll-behavior: smooth;
+}
+
 body{
 	/*background-color:var(--background-color) !important ;*/
 	/*background-image: linear-gradient(0deg, rgba(31, 40, 51, 1), rgba(31, 40, 51, 1));*/
-	background-image: linear-gradient(0deg, rgba(11, 13, 16, 0.7), rgba(11, 13, 16, 0.7));
-	background-blend-mode: overlay;
-	background-color:#1F2833 ;
+	background-color: #0B0C10;
 }
 
 
@@ -132,13 +132,46 @@ canvas.particles-js-canvas-el{
 	width: 80%;
 }
 
+.media-icons{
+	width: 50%;
+	margin: 0 auto;
+}
+
+.media-icons a{
+	text-decoration: none;
+}
+
+.media-icons li{
+	display: inline;
+}
+.media-icons .fab{
+	color: var(--heading-color-dark);
+  padding: 20px;
+  font-size: 30px;
+  width: 30px;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 5%;
+}
+
+.media-icons .fab:hover {
+  opacity: 0.7;
+}
+
+
+
 @media (max-width: 1200px) and (min-width: 993px){
 	.hero-section .row h1{
 		font-size: 58px;
 	}
+	.media-icons .fab{
+  padding: 17px;
+  font-size: 24px;
+  width: 24px;
+	}
 }
 
-@media (max-width: 993px) and (min-width: 768px){
+@media (max-width: 992px) and (min-width: 768px){
 	.hero-section .row h1{
 		font-size: 42px;
 	}
@@ -158,11 +191,20 @@ canvas.particles-js-canvas-el{
 	.hero-section .row button{
 		font-size: 16px;
 	}
+
+	.media-icons .fab{
+  padding: 10px;
+  font-size: 18px;
+  width: 18px;
+	}
 }
 
-@media (max-width: 768px) and (min-width: 576px){
+@media (max-width: 767px) and (min-width: 576px){
 	.hero-section{
 		margin: 56px 0px;
+	}
+	.hero-section img{
+		width: 50%;
 	}
 	.hero-section .row h1{
 		font-size: 48px;
@@ -171,7 +213,7 @@ canvas.particles-js-canvas-el{
 
 	.hero-section .row h2{
 		font-size: 16px;
-		text-align: center;
+		text-align: center;s
 	}
 
 	.hero-section .row h3{
@@ -195,40 +237,73 @@ canvas.particles-js-canvas-el{
 		font-size: 12px;
 		text-align: center;
 	}
+	.media-icons .fab{
+  padding: 7px;
+  font-size: 16px;
+  width: 16px;
+	}
 }
 
-.media-icons{
-	width: 50%;
-	margin: 0 auto;
+@media (max-width: 575px){
+	.hero-section{
+		margin: 56px 0px;
+	}
+	.hero-section .row h1{
+		font-size: 32px;
+		text-align: center;
+	}
+
+	.hero-section .row h2{
+		font-size: 12px;
+		text-align: center;
+	}
+
+	.hero-section .row h3{
+		font-size: 16px;
+		text-align: center;
+		margin-bottom: 0px;
+	}
+
+	.hero-section .row p{
+		font-size: 10px;
+		text-align: center;
+	}
+	.hero-section .btn-container{
+		justify-content: center;
+		text-align: center;
+	}
+	
+	.hero-section  .btn-container button{
+		width: 100px; 
+		height: 44px;
+		font-size: 10px;
+		text-align: center;
+	}
+	.media-icons .fab{
+  padding: 5px;
+  font-size: 12px;
+  width: 12px;
+	}
 }
 
-.media-icons li{
-	color: var(--heading-color-dark);
-	display: inline;
-}
-.media-icons .fa {
-  padding: 20px;
-  font-size: 30px;
-  width: 30px;
-  text-align: center;
-  text-decoration: none;
-  border-radius: 5%;
-}
-
-.media-icons .fa:hover {
-  opacity: 0.7;
-}
 
 /*-----------------SKILLS SECTION-----------------------------*/
+.skills-section{
+	margin-top: 16px;
+	width: 100vw;
+	height: 100vh;
+	background-color: var(--background-color);
+	padding: 5px;
+}
 .skills-section h1{
-	font-size: 64px;
+	font-size: 60px;
 	font-weight: 800;
 	color: var(--text-color);
 	text-align: center;
 }
 
 .skills-section h3{
-	font-size: 32px;
+	font-size: 30px;
 	font-weight: 800;
 	color: var(--text-color);
 	text-align: center;
@@ -246,12 +321,12 @@ canvas.particles-js-canvas-el{
 	margin-bottom: 24px;
 }
 
-ul.skills-item{
+/*ul.skills-item{
 	list-style-type: none;
 	padding: 0;
   margin: 0;
   font-size: 24px;
-}
+}*/
 .skill-left{
 	color: var(--heading-color-dark);
 	text-align: center;
@@ -266,17 +341,40 @@ ul.skills-item{
 
 .flt{
 	color: var(--headings-color);
-	font-size: 18px;
+	font-size: 16px;
 }
 
-.skill-left li span.fa-star{
+/*.skill-left li span.fa-star{
 	color:#564949;
 }
 
 .skill-left li span.checked{
 	color: orange;
+}*/
+
+.skills-item td span{
+	margin-left: 5px;
 }
 
+
+.skill-left td span.fa-star{
+	color:#564949;
+}
+
+.skill-left td span.checked{
+	color: orange;
+}
+
+#skills-table{
+	margin: auto;
+	list-style-type: none;
+	padding: 0;
+  font-size: 24px;
+}
+
+.left-col{
+	text-align: left;
+}
 
 @media (max-width: 1200px) and (min-width: 993px){
 	.skills-section h1{
@@ -284,7 +382,7 @@ ul.skills-item{
 	}
 }
 
-@media (max-width: 993px) and (min-width: 768px){
+@media (max-width: 992px) and (min-width: 768px){
 	.skills-section h1{
 		font-size: 42px;
 	}
@@ -299,9 +397,10 @@ ul.skills-item{
 
 }
 
-@media (max-width: 768px) and (min-width: 576px){
+@media (max-width: 767px) and (min-width: 576px){
 	.skills-section{
 		margin: 56px 0px;
+		height: auto;
 	}
 	.skills-section h1{
 		font-size: 48px;
@@ -320,10 +419,11 @@ ul.skills-item{
 	}
 }
 
-@media (max-width: 566px){
+@media (max-width: 575px){
 	.skills-section{
 		margin: 42px 0px;
 		font-size: 16px;
+		height: auto;
 	}
 	.skills-section h1{
 		font-size: 3em;
@@ -344,5 +444,92 @@ ul.skills-item{
 		font-size: 7px;
 		margin-left: 2px;
 	}
+	#skills-table{
+	margin: auto;
+	list-style-type: none;
+	padding: 0;
+  font-size: 16px;
+}
+
+}
+
+/*-----------------------PROJECTS-SECTION----------------------------------*/
+#projects-section {
+	margin-top: 200px;
+	height: 100vh;
+}
+
+
+#projects-section h1{
+	font-size: 64px;
+	font-weight: 800;
+	color: var(--text-color);
+	text-align: center;
+}
+
+#projects-section .project-item{
+	margin: 0px;
+}
+
+#projects-section .project-item figure{
+		background-color: white;
+		border: 2px solid var(--heading-color-dark);
+		margin: 10px;
+		margin-bottom: 20px;
+		height: 200px;
+}
+
+#projects-section .project-item figure a{
+	text-decoration: none;
+}
+
+#projects-section .project-item figcaption{
+		color: var(--headings-color);
+		text-align: center;
+}
+
+.project-item img{
+	width: 100%;
+	height: 100%;
+}
+
+
+@media (max-width: 1200px) and (min-width: 993px){
+	#projects-section h1{
+		font-size: 58px;
+	}
+}
+
+@media (max-width: 992px) and (min-width: 768px){
+	#projects-section h1{
+		font-size: 42px;
+	}
+
+
+}
+
+@media (max-width: 767px) and (min-width: 576px){
+	#projects-section{
+		margin: 56px 0px;
+		height: auto;
+	}
+	#projects-section h1{
+		font-size: 48px;
+		text-align: center;
+	}
+
+}
+
+@media (max-width: 575px){
+	#projects-section{
+		margin: 42px 0px;
+		font-size: 16px;
+		height: auto;
+	}
+	#projects-section h1{
+		font-size: 3em;
+		text-align: center;
+	}
+
 
 }
